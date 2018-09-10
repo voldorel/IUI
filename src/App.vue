@@ -9,41 +9,39 @@
       app
       :width="210"
       permanent
+      class="pa-0"
     >
       <v-list>
-        <v-list-tile
-          value="true"
-          v-for="(item, i) in items"
-          :key="i"
-        >
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
-          </v-list-tile-content>
+        <v-list-tile>
+          <v-spacer></v-spacer>
+          <v-btn fab small flat>
+            <v-icon>compare_arrows</v-icon>
+          </v-btn>
+          <v-btn fab small flat>
+            
+              <v-icon>input</v-icon>
+            
+          </v-btn>
         </v-list-tile>
+        <v-text-field
+          name="name"
+          label="search"
+          id="id"
+        >
+        </v-text-field>
+        
       </v-list>
+      
     </v-navigation-drawer>
     <v-toolbar
       app
     >
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>remove</v-icon>
-      </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
     </v-toolbar>
-    <v-content>
-      <HelloWorld/>
-    </v-content>
     <v-navigation-drawer
       persistant
       :right="right"
@@ -73,13 +71,66 @@ export default {
       drawer: true,
       fixed: false,
       items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
+        icon: 'chevron_right',
+        title: 'root',
+        subitems: [{
+          icon: 'mood',
+          title: 'mood',
+          active: false,
+            subitems: [{
+            icon: 'mood',
+            title: 'mood'
+          },
+          {
+            icon: 'tram',
+            title: 'tram'
+          }]
+        },
+        {
+          icon: 'tram',
+          title: 'tram',
+          active: false,
+          subitems: [{
+            icon: 'mood',
+            title: 'mood'
+          },
+          {
+            icon: 'tram',
+            title: 'tram'
+          }]
+        }]
+      }, {
+        icon: 'chevron_right',
+        title: 'root',
+        subitems: [{
+          icon: 'mood',
+          title: 'mood',
+          active: false,
+          subitems: [{
+            icon: 'mood',
+            title: 'mood'
+          },
+          {
+            icon: 'tram',
+            title: 'tram'
+          }]
+        },
+        {
+          icon: 'tram',
+          title: 'tram',
+          active: false,
+          subitems: [{
+            icon: 'mood',
+            title: 'mood'
+          },
+          {
+            icon: 'tram',
+            title: 'tram'
+          }]
+        }]
       }],
       miniVariant: false,
       right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
     }
   }
 }
