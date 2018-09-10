@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
@@ -8,6 +8,7 @@
       fixed
       app
       :width="210"
+      permanent
     >
       <v-list>
         <v-list-tile
@@ -49,6 +50,8 @@
       v-model="rightDrawer"
       fixed
       app
+      :width="210"
+      permanent
     >
       <v-list>
       </v-list>
