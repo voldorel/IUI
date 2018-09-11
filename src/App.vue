@@ -33,6 +33,9 @@
       </v-list>
       
     </v-navigation-drawer>
+    <v-content>
+      <work-space></work-space>
+    </v-content>
     <v-toolbar
       app
     >
@@ -53,84 +56,28 @@
     >
       <v-list>
       </v-list>
+
     </v-navigation-drawer>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import WorkSpace from './components/WorkSpace'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    'work-space' : WorkSpace
   },
   data () {
     return {
       clipped: false,
       drawer: true,
       fixed: false,
-      items: [{
-        icon: 'chevron_right',
-        title: 'root',
-        subitems: [{
-          icon: 'mood',
-          title: 'mood',
-          active: false,
-            subitems: [{
-            icon: 'mood',
-            title: 'mood'
-          },
-          {
-            icon: 'tram',
-            title: 'tram'
-          }]
-        },
-        {
-          icon: 'tram',
-          title: 'tram',
-          active: false,
-          subitems: [{
-            icon: 'mood',
-            title: 'mood'
-          },
-          {
-            icon: 'tram',
-            title: 'tram'
-          }]
-        }]
-      }, {
-        icon: 'chevron_right',
-        title: 'root',
-        subitems: [{
-          icon: 'mood',
-          title: 'mood',
-          active: false,
-          subitems: [{
-            icon: 'mood',
-            title: 'mood'
-          },
-          {
-            icon: 'tram',
-            title: 'tram'
-          }]
-        },
-        {
-          icon: 'tram',
-          title: 'tram',
-          active: false,
-          subitems: [{
-            icon: 'mood',
-            title: 'mood'
-          },
-          {
-            icon: 'tram',
-            title: 'tram'
-          }]
-        }]
-      }],
       miniVariant: false,
-      right: true,
+      right: true
     }
   }
 }
