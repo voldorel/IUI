@@ -12,23 +12,19 @@
       class="pa-0"
     >
       <v-list>
+
         <v-list-tile>
-          <v-spacer></v-spacer>
-          <v-btn fab small flat>
-            <v-icon>compare_arrows</v-icon>
-          </v-btn>
-          <v-btn fab small flat>
-            
-              <v-icon>input</v-icon>
-            
-          </v-btn>
+            <v-tabs
+                    align-with-title>
+                <v-tab
+                        v-for="n in 3"
+                        :key="n"
+                >
+                    Item {{ n }}
+                </v-tab>
+            </v-tabs>
         </v-list-tile>
-        <v-text-field
-          name="name"
-          label="search"
-          id="id"
-        >
-        </v-text-field>
+
         
       </v-list>
       
@@ -39,11 +35,7 @@
     <v-toolbar
       app
     >
-      
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+        <Tools></Tools>
     </v-toolbar>
     <v-navigation-drawer
       persistant
@@ -64,12 +56,14 @@
 <script>
 import HelloWorld from './components/HelloWorld'
 import WorkSpace from './components/WorkSpace'
+import Tools from './components/Tools'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    'work-space' : WorkSpace
+      HelloWorld,
+      'work-space' : WorkSpace,
+      Tools
   },
   data () {
     return {
