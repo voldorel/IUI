@@ -1,5 +1,6 @@
 <template>
   <v-app dark>
+        
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
@@ -37,19 +38,7 @@
     >
         <Tools></Tools>
     </v-toolbar>
-    <v-navigation-drawer
-      persistant
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-      app
-      :width="210"
-      permanent
-    >
-      <v-list>
-      </v-list>
-
-    </v-navigation-drawer>
+    <right-nav></right-nav>
   </v-app>
 </template>
 
@@ -57,12 +46,14 @@
 import HelloWorld from './components/HelloWorld'
 import WorkSpace from './components/WorkSpace'
 import Tools from './components/Tools'
+import RightNav from './components/RightNav'
 
 export default {
   name: 'App',
   components: {
       HelloWorld,
       'work-space' : WorkSpace,
+      'right-nav' : RightNav,
       Tools
   },
   data () {
@@ -71,7 +62,15 @@ export default {
       drawer: true,
       fixed: false,
       miniVariant: false,
-      right: true
+      Layers: [{
+
+      }],
+      selected: {
+        x : 0,
+        y: 0,
+        scaleX: 1,
+        scaleY: 1
+      }
     }
   }
 }

@@ -1,11 +1,14 @@
 <template>
   <v-container>
     <v-layout row wrap>
-      <div>
-        <div id = 'wrapped-content'>
+      <div id = 'scale'>
+        <div id = 'view'>
           
         </div>
       </div>
+      <v-btn large fab id = 'zoom'>
+        <v-icon>zoom_in</v-icon>
+      </v-btn>
     </v-layout>
   </v-container>
 </template>
@@ -18,8 +21,8 @@ export default {
 }
 </script>
 <style>
-  #wrapped-content {
-    width: 500px;
+  #view {
+    width: 300px;
     height: 500px;
     background-color: white;
     position: absolute;
@@ -27,5 +30,11 @@ export default {
     margin-right: auto;
     left: 0;
     right: 0; 
+    top: 40px;
+  }
+  #zoom {
+    top: 450px;
+    left: 200px;
+    z-index: 10
   }
 </style>
