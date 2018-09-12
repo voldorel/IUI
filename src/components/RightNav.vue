@@ -11,59 +11,29 @@
     <v-list>
       <v-list-tile>
         <v-flex xs12 sm6 class="py-2">
-        <v-btn-toggle v-model="toggle_one" mandatory>
-          <v-btn flat>
-            <v-icon>format_align_left</v-icon>
-          </v-btn>
-          <v-btn flat>
-            <v-icon>format_align_center</v-icon>
-          </v-btn>
-          <v-btn flat>
-            <v-icon>format_align_right</v-icon>
-          </v-btn>
-          <v-btn flat>
-            <v-icon>format_align_justify</v-icon>
-          </v-btn>
-        </v-btn-toggle>
-      </v-flex>
+          <v-btn-toggle v-model="toggle_one" mandatory>
+            <v-btn flat>
+              <v-icon>format_align_left</v-icon>
+            </v-btn>
+            <v-btn flat>
+              <v-icon>format_align_center</v-icon>
+            </v-btn>
+            <v-btn flat>
+              <v-icon>format_align_right</v-icon>
+            </v-btn>
+            <v-btn flat>
+              <v-icon>format_align_justify</v-icon>
+            </v-btn>
+          </v-btn-toggle>
+        </v-flex>
       </v-list-tile>
       
       <hr>
-
-      <v-list-tile>
-      </v-list-tile>
-      <v-list-tile>
-        <v-list-tile-action>
-          <v-icon>transform</v-icon>
-        </v-list-tile-action>
-        <v-text-field
-        v-model="x"
-        label="X"
-        
-      ></v-text-field>
-      <v-text-field
-        v-model="y"
-        label="Y"
-      >
-      </v-text-field>
-      </v-list-tile>
-      <v-list-tile>
-        <v-list-tile-action>
-          <v-icon>zoom_out_map</v-icon>
-        </v-list-tile-action>
-        <v-text-field
-        v-model="scaleX"
-        label="scale X"
-        
-      ></v-text-field>
-      <v-text-field
-        v-model="scaleY"
-        label="scale Y"
-      >
-      </v-text-field>
-      </v-list-tile>
-      <v-list-tile>
-      </v-list-tile>
+      <Transform></Transform>
+      <hr>
+      <Transform></Transform>
+      <hr>
+      <Transform></Transform>
       <hr>
     </v-list>
 
@@ -71,12 +41,15 @@
 </template>
 
 <script>
+import Transform from './property-components/Transform'
 export default {
   name: "RightNav",
   data () {
     return {
-      
+      Transform
     }
+  }, components: {
+    Transform
   }
 }
 </script>

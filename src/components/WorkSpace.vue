@@ -34,7 +34,7 @@ export default {
   }
   #zoom {
     top: 450px;
-    left: 200px;
+    left: 40px;
     z-index: 10
   }
 </style>
