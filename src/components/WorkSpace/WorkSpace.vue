@@ -6,9 +6,6 @@
           
         </div>
       </div>
-      <v-btn large fab id = 'zoom'>
-        <v-icon>fas fa-search-plus</v-icon>
-      </v-btn>
     </v-layout>
     <v-toolbar
       app
@@ -17,19 +14,10 @@
         
           
 
-          <v-overflow-btn
-            :items="dropdown_edit"
-            label="Editable Btn"
-            editable
-            item-value="text"
-            small
-          ></v-overflow-btn>
-        
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <h1>UX Designer</h1>
-        <span style="color : #576769">‌ pro</span>
         <v-spacer></v-spacer>
         </v-card-text>
         <v-spacer></v-spacer>
@@ -43,10 +31,14 @@
   </v-container>
 </template>
 <script>
+import Tools from './Tools'
 export default {
   name: '',
   props: {
     msg: String
+  }
+  ,components:{
+    Tools
   }
 }
 </script>
@@ -61,10 +53,5 @@ export default {
     left: 0;
     right: 0; 
     top: 40px;
-  }
-  #zoom {
-    top: 450px;
-    left: 40px;
-    z-index: 10
   }
 </style>
