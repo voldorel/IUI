@@ -9,7 +9,7 @@
     </v-list-tile>
     <v-list-tile>
       <v-list-tile-action>
-        <v-icon>transform</v-icon>
+        <v-icon>fas fa-arrows-alt</v-icon>
       </v-list-tile-action>
       <v-text-field
       v-model="x"
@@ -24,7 +24,7 @@
     </v-list-tile>
     <v-list-tile>
       <v-list-tile-action>
-        <v-icon>zoom_out_map</v-icon>
+        <v-icon>fas fa-expand-arrows-alt</v-icon>
       </v-list-tile-action>
       <v-text-field
       v-model="scaleX"

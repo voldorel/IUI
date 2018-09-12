@@ -37,6 +37,20 @@
       app
     >
         <Tools></Tools>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <h1>UX Designer</h1>
+        <span style="color : #576769">‌ pro</span>
+        <v-spacer></v-spacer>
+        </v-card-text>
+        <v-spacer></v-spacer>
+        <v-btn flat fab small>
+          <v-icon>fas fa-play</v-icon>
+        </v-btn>
+        <v-btn flat fab small>
+          <v-icon>fas fa-file-export</v-icon>
+        </v-btn>
     </v-toolbar>
     <right-nav></right-nav>
   </v-app>

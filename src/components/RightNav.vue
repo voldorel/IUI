@@ -13,16 +13,16 @@
         <v-flex xs12 sm6 class="py-2">
           <v-btn-toggle v-model="toggle_one" mandatory>
             <v-btn flat>
-              <v-icon>format_align_left</v-icon>
+              <v-icon>fas fa-align-left</v-icon>
             </v-btn>
             <v-btn flat>
-              <v-icon>format_align_center</v-icon>
+              <v-icon>fas fa-align-center</v-icon>
             </v-btn>
             <v-btn flat>
-              <v-icon>format_align_right</v-icon>
+              <v-icon>fas fa-align-right</v-icon>
             </v-btn>
             <v-btn flat>
-              <v-icon>format_align_justify</v-icon>
+              <v-icon>fas fa-align-justify</v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-flex>

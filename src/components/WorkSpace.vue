@@ -7,7 +7,7 @@
         </div>
       </div>
       <v-btn large fab id = 'zoom'>
-        <v-icon>zoom_in</v-icon>
+        <v-icon>fas fa-search-plus</v-icon>
       </v-btn>
     </v-layout>
   </v-container>
