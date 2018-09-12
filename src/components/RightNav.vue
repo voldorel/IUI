@@ -9,6 +9,8 @@
     permanent
   >
     <v-list>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
       <v-list-tile>
         <v-flex xs12 sm6 class="py-2">
           <v-btn-toggle v-model="toggle_one" mandatory>

@@ -28,7 +28,20 @@
 
         
       </v-list>
-      
+      <v-expansion-panel>
+         <v-expansion-panel-content
+              v-for="(item,i) in 5"
+              :key="i"
+            >
+              <div slot="header">Layer</div>
+              <v-card>
+                <v-card-text>sub layers</v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+          </v-card>
+          
+        </v-expansion-panel-content>
+      </v-expansion-panel>
     </v-navigation-drawer>
     <v-content>
       <work-space></work-space>
