@@ -1,48 +1,6 @@
 <template>
   <v-app dark>
-        
-    <v-navigation-drawer
-      persistent
-      :mini-variant="miniVariant"
-      v-model="drawer"
-      enable-resize-watcher
-      fixed
-      app
-      :width="210"
-      permanent
-      class="pa-0"
-    >
-      <v-list>
-
-        <v-list-tile>
-            <v-tabs
-                    align-with-title>
-                <v-tab
-                        v-for="n in 3"
-                        :key="n"
-                >
-                    Item {{ n }}
-                </v-tab>
-            </v-tabs>
-        </v-list-tile>
-
-        
-      </v-list>
-      <v-expansion-panel>
-         <v-expansion-panel-content
-              v-for="(item,i) in 5"
-              :key="i"
-            >
-              <div slot="header">Layer</div>
-              <v-card>
-                <v-card-text>sub layers</v-card-text>
-              </v-card>
-            </v-expansion-panel-content>
-          </v-card>
-          
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-navigation-drawer>
+    <LeftNav></LeftNav>
     <v-content>
       <work-space></work-space>
     </v-content>
@@ -74,6 +32,7 @@ import HelloWorld from './components/HelloWorld'
 import WorkSpace from './components/WorkSpace'
 import Tools from './components/Tools'
 import RightNav from './components/RightNav'
+import LeftNav from './components/LeftNav/LeftNav'
 
 export default {
   name: 'App',
@@ -81,7 +40,8 @@ export default {
       HelloWorld,
       'work-space' : WorkSpace,
       'right-nav' : RightNav,
-      Tools
+      Tools,
+      LeftNav
   },
   data () {
     return {
