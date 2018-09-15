@@ -3,6 +3,7 @@
     <LeftNav></LeftNav>
     <v-content>
       <work-space></work-space>
+      <ProjectInit></ProjectInit>
       <Login></Login>
     </v-content>
     <right-nav></right-nav>
@@ -14,6 +15,7 @@ import WorkSpace from './components/WorkSpace/WorkSpace'
 import RightNav from './components/RightNav'
 import LeftNav from './components/LeftNav/LeftNav'
 import Login from './components/pop-up/Login'
+import ProjectInit from './components/pop-up/ProjectInit'
 
 export default {
   name: 'App',
@@ -21,7 +23,8 @@ export default {
       'work-space' : WorkSpace,
       'right-nav' : RightNav,
       LeftNav,
-      Login
+      Login,
+      ProjectInit
   },
   data () {
     return {
