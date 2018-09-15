@@ -3,8 +3,8 @@
     <LeftNav></LeftNav>
     <v-content>
       <work-space></work-space>
+      <Login></Login>
     </v-content>
-
     <right-nav></right-nav>
   </v-app>
 </template>
@@ -13,13 +13,15 @@
 import WorkSpace from './components/WorkSpace/WorkSpace'
 import RightNav from './components/RightNav'
 import LeftNav from './components/LeftNav/LeftNav'
+import Login from './components/pop-up/Login'
 
 export default {
   name: 'App',
   components: {
       'work-space' : WorkSpace,
       'right-nav' : RightNav,
-      LeftNav
+      LeftNav,
+      Login
   },
   data () {
     return {
