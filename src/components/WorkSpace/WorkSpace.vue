@@ -19,7 +19,6 @@
         <v-spacer></v-spacer>
         <h1>UX Designer</h1>
         <v-spacer></v-spacer>
-        </v-card-text>
         <v-spacer></v-spacer>
         <v-btn flat fab small>
           <v-icon>fas fa-play</v-icon>
