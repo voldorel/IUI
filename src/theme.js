@@ -4,7 +4,7 @@ export default {
   primary: {
     base: colors.green.base,
     darken1: colors.green.base,
-    accent: colors.lightBlue.darken1,
+    accent: colors.red.darken1,
   },
   secondary: colors.indigo,
   tertiary: colors.pink.base,
