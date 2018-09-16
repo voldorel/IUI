@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <v-navigation-drawer
+    <v-navigation-drawer
                 persistent
                 :mini-variant="miniVariant"
                 v-model="drawer"
@@ -42,8 +41,7 @@
                 </v-tab-item>
             </v-tabs-items>
 
-        </v-navigation-drawer>
-    </div>
+    </v-navigation-drawer>
 </template>
 
 <script>
