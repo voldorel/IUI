@@ -1,11 +1,19 @@
 <template>
     <div class="text-xs-center">
-        <v-menu offset-y>
+        <v-menu offset-y :style = "{marginLeft : '-10px'}" transition="slide-y-transition">
             <v-icon
+                    size = '0.9em'
+                    slot="activator"
+                    left="true">
+                near_me
+            </v-icon>
+            <v-icon
+                    size = '0.7em'
                     slot="activator"
                     left="true"
-                    small>
-                fas fa-mouse-pointer
+                    :style = "{marginLeft : '0.7em'}"
+                    >
+                fas fa-sort-down
             </v-icon>
             <v-list>
                 <v-list-tile
