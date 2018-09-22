@@ -6,7 +6,7 @@
                 enable-resize-watcher
                 fixed
                 app
-                :width="240"
+                :width="180"
                 permanent
                 class="pa-0"
         >

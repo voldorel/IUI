@@ -9,7 +9,6 @@
 
                 <template slot="title" slot-scope="{ node }">
           <span class="item-icon">
-            <!--<v-icon v-if="node.isLeaf">fas fa-file</v-icon>-->
             <i class="fa fa-file" v-if="node.isLeaf"></i>
             <i class="fa fa-folder" v-if="!node.isLeaf"></i>
           </span>
@@ -44,7 +43,6 @@
 <script>
 
 
-
 	var nodes = [
 		{title: 'Item1', isLeaf: true},
 		{title: 'Item2', isLeaf: true, data: { visible: false }},
@@ -60,6 +58,9 @@
 				}
 			]
 		},
+		{title: 'Folder5', isExpanded: false},
+		{title: 'Item6', isLeaf: true},
+		{title: 'Item7', isLeaf: true, data: { visible: false }},
 		{title: 'Folder5', isExpanded: false},
 		{title: 'Item6', isLeaf: true},
 		{title: 'Item7', isLeaf: true, data: { visible: false }},
@@ -97,6 +98,7 @@
 	}
 </script>
 <style src="../../../node_modules/sl-vue-tree/dist/sl-vue-tree-dark.css"></style>
+<style src="./TreeCustom.css"></style>
 
 <style scoped>
 
@@ -122,13 +124,7 @@
 
     .sl-vue-tree.sl-vue-tree-root{
         background-color: rgba(0, 0, 0,0);
-        border: 0px solid rgb(9, 22, 29);
+        border: 0px ;
 
     }
-
-    .sl-vue-tree-selected > .sl-vue-tree-node-item {
-        background-color: #13242d;
-        color: white;
-    }
-
 </style>
