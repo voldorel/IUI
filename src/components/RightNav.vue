@@ -5,30 +5,36 @@
     v-model="rightDrawer"
     fixed
     app
-    :width="250"
+    :width="175"
     permanent
   >
-    <v-list>
+    <v-list :style ="{marginTop: '-20px', marginLeft: '-10px'}">
       <v-list-tile>
-        <v-flex xs12 sm6 class="py-2">
-          <v-btn-toggle v-model="toggle_one" mandatory>
-            <v-btn flat>
-              <v-icon>fas fa-align-left</v-icon>
-            </v-btn>
-            <v-btn flat>
-              <v-icon>fas fa-align-center</v-icon>
-            </v-btn>
-            <v-btn flat>
-              <v-icon>fas fa-align-right</v-icon>
-            </v-btn>
-            <v-btn flat>
-              <v-icon>fas fa-align-justify</v-icon>
-            </v-btn>
-          </v-btn-toggle>
-        </v-flex>
+        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-align-left</v-icon>
+        </v-btn>
+        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-align-center</v-icon>
+        </v-btn>
+        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-align-right</v-icon>
+        </v-btn>
+        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-sort-amount-down</v-icon>
+        </v-btn>
+        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-sort-amount-up</v-icon>
+        </v-btn>
+        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-paragraph</v-icon>
+        </v-btn>
+        <v-btn flat fab small disabled :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-pen</v-icon>
+        </v-btn>
+        <v-btn flat fab small disabled :style ="{width : '5px', height: '5px'}">
+          <v-icon size = '0.8em'>fas fa-pen-fancy</v-icon>
+        </v-btn>
       </v-list-tile>
-      
-      <hr>
       <Transform></Transform>
       <hr>
       <Transform></Transform>

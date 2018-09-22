@@ -129,7 +129,7 @@
                   </v-card-text>
                   <v-card-text>
                     <div class="m-up">
-                      <v-icon small> fas fa-comment</v-icon>
+                      <v-icon small> fas fa-comment-dots</v-icon>
                       Give Feedback
                     </div>
                   </v-card-text>
