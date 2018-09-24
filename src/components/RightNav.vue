@@ -37,7 +37,7 @@
       </v-list-tile>
       <Transform></Transform>
       <hr class="under">
-      <Transform></Transform>
+      <Typography></Typography>
       <hr class="under">
       
     </v-list>
@@ -47,14 +47,15 @@
 
 <script>
 import Transform from './property-components/Transform'
+import Typography from './property-components/Typography'
 export default {
   name: "RightNav",
   data () {
     return {
-      Transform
     }
   }, components: {
-    Transform
+    Transform,
+    Typography
   }
 }
 </script>
