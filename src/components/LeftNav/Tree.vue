@@ -102,29 +102,4 @@
 
 <style scoped>
 
-    .row {
-        display: flex;
-        margin-bottom: 10px;
-    }
-
-    .tree-container {
-        flex-grow: 1;
-    }
-
-    .sl-vue-tree.sl-vue-tree-root {
-        flex-grow: 1;
-        height: auto;
-    }
-
-    .item-icon {
-        display: inline-block;
-        text-align: left;
-        width: 20px;
-    }
-
-    .sl-vue-tree.sl-vue-tree-root{
-        background-color: rgba(0, 0, 0,0);
-        border: 0px ;
-
-    }
 </style>
