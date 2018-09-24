@@ -1,21 +1,24 @@
 <template>
   <div>
     <v-list-tile>
-      <v-card-text class = 'sm-text'>
+      <v-card-text class = 'sm-text' :style = "{marginTop : '-6em', marginLeft: '-2em'}">
         Typography
       </v-card-text>
     </v-list-tile>
-    <v-list-tile >
+    <v-list-tile class = 'option-m' :style = "{marginTop : '-3.5em'}">
       <v-card-text>
         <v-menu offset-y>
           <v-btn flat slot="activator" class ='small-text'>Avenir
-          <v-icon
-          size = '0.7em'
-          left="true"
-          :style = "{marginLeft : '0.5em'}"
-          >
-            fas fa-sort-down
-          </v-icon>
+            <div :style = "{marginLeft : '0.5em'}">
+              
+              <v-icon
+              size = '0.7em'
+              left="true"
+              
+              >
+                fas fa-sort-down
+              </v-icon>
+            </div>
           </v-btn>
           <v-list>
             <!-- <v-list-tile v-for="item in items" :key="item.key" @click="callback">
@@ -25,7 +28,7 @@
         </v-menu>
       </v-card-text>
     </v-list-tile>
-    <v-list-tile >
+    <v-list-tile class = 'option-m'>
       <v-card-text>
         <v-menu offset-y>
           <v-btn flat slot="activator" class ='small-text'>Black
@@ -62,5 +65,9 @@ export default {
   .small-text {
     font-size: 0.8em;
     text-transform: none;
+  }
+  .option-m {
+    margin-left: -2.8em;
+    margin-top: -2em;
   }
 </style>
