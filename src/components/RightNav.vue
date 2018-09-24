@@ -36,9 +36,9 @@
         </v-btn>
       </v-list-tile>
       <Transform></Transform>
-      <hr>
+      <hr class="under">
       <Transform></Transform>
-      <hr>
+      <hr class="under">
       
     </v-list>
 
@@ -58,3 +58,10 @@ export default {
   }
 }
 </script>
+
+<style>
+  
+  .under {
+    margin-bottom: 1em;
+  }
+</style>

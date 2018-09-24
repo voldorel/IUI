@@ -2,7 +2,7 @@
   <div id = 'init-pop-up'>
     <v-dialog v-model="dialog" persistent max-width="590">
       <v-btn slot="activator" dark>Create Project</v-btn>
-      <v-card :style="{backgroundColor : '#1d1818'}">
+      <v-card>
 
         <v-btn icon small @click.native="dialog = false" :style="{width: '10px', height: '10px'}" class = 'grey1'>
           <v-icon size = '8px'>fas fa-times</v-icon>

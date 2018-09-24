@@ -2,8 +2,11 @@
   <v-container>
     <v-layout row wrap>
       <div id = 'scale'>
-        <div id = 'view'>
-          
+        <div class = 'view' :style="{left: '-600px'}">
+        </div>
+        <div class = 'view'>  
+        </div>
+        <div class = 'view' :style="{left: '600px'}">
         </div>
       </div>
     </v-layout>
@@ -67,10 +70,9 @@ export default {
 }
 </script>
 <style>
-  #view {
-    width: 300px;
-    height: 500px;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6622aa+0,2989d8+50,207cca+51,a96cc9+100 */
+  .view {
+    width: 250px;
+    height: 400px;
     background: #6622aa; /* Old browsers */
     background: -moz-linear-gradient(top, #6622aa 0%, #2989d8 50%, #207cca 51%, #a96cc9 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #6622aa 0%,#2989d8 50%,#207cca 51%,#a96cc9 100%); /* Chrome10-25,Safari5.1-6 */
@@ -80,6 +82,6 @@ export default {
     margin-right: auto;
     left: 0;
     right: 0; 
-    top: 80px;
+    top: 140px;
   }
 </style>

@@ -4,18 +4,14 @@
       <v-text-field
       solo
       flat
-      v-model="x"
       class = 'caption'
-      :style = "{}"
-      label = 'asdasd'
+      v-model = "layer.x"
     ></v-text-field>
     <v-text-field
       solo
       flat
-      v-model="y"
+      v-model="layer.y"
       class = 'caption'
-      :style = "{}"
-      label = 'asdasd'
     >
     </v-text-field>
     </v-list-tile>
@@ -23,22 +19,18 @@
       <v-text-field
       solo
       flat  
-      v-model="scaleX"
+      v-model="layer.xScale"
       class = 'caption'
-      :style = "{}"
-      label = 'asdasd'
-      
     ></v-text-field>
     <v-text-field
       solo
       flat
-      v-model="scaleY"
+      v-model="layer.yScale"
       class = 'caption'
-      :style = "{}"
-      label = 'asdasd'
     >
     </v-text-field>
     </v-list-tile>
+    
   </div>
 </template>
 
@@ -47,6 +39,12 @@
 export default {
   data () {
     return {
+      layer: {
+        x : 10,
+        y : 20,
+        xScale : 0.8,
+        yScale : 0.8
+      }
     }
   }
 }

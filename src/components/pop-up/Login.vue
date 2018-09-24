@@ -2,7 +2,7 @@
   <div id = 'login-pop-up'>
     <v-dialog v-model="dialog" persistent max-width="600px">
       <v-btn slot="activator" dark>login</v-btn>
-      <v-card :style="{backgroundColor : '#1d1818'}">
+      <v-card>
         <v-btn icon small @click.native="dialog = false" :style="{width: '10px', height: '10px', color: '#ccc'}">
           <v-icon size = '10px'>fas fa-times</v-icon>
         </v-btn>
