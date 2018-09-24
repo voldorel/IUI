@@ -18,7 +18,7 @@
             permanent
             >
               <v-list>
-                <v-list-tile @click = '' class = 'list-file'>
+                <v-list-tile @click = 'console.log()' class = 'list-file'>
                   <v-list-tile-action class = 'm-icon'>
                     <v-icon small color = 'primary'>fas fa-file</v-icon>
                   </v-list-tile-action>
@@ -28,7 +28,7 @@
                     </p>
                   </v-list-tile-content>
                 </v-list-tile>
-                <v-list-tile @click = '' class = 'list-file'>
+                <v-list-tile @click = 'console.log()' class = 'list-file'>
                   <v-list-tile-action class = 'm-icon'>
                     <v-icon small>fas fa-file</v-icon>
                   </v-list-tile-action>
@@ -38,7 +38,7 @@
                     </p>
                   </v-list-tile-content>
                 </v-list-tile>
-                <v-list-tile @click = '' class = 'list-file'>
+                <v-list-tile @click = 'console.log()' class = 'list-file'>
                   <v-list-tile-action class = 'm-icon'>
                     <v-icon small>fas fa-file</v-icon>
                   </v-list-tile-action>
@@ -224,4 +224,9 @@
   .list-file {
     margin-top: -20px;
   }
+
+  .v-dialog__content.v-dialog__content--active {
+    background-color: rgba(0,0,0,1);
+  }
+
 </style>
