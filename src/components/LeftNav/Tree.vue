@@ -101,4 +101,26 @@
 <style src="./TreeCustom.css"></style>
 
 <style scoped>
+
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #1c66cb;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
 </style>
