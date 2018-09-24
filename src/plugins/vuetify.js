@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+import '../stylus/main.styl';
 
 // @require '~vuetify/src/stylus/settings/_theme'
 
