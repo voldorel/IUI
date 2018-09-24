@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 
+// @require '~vuetify/src/stylus/settings/_theme'
+
 Vue.use(Vuetify, {
   theme: {
     primary: '#4F9BE7',
@@ -12,4 +14,7 @@ Vue.use(Vuetify, {
     success: '#4CAF50',
     warning: '#FFC107'
   },
+  darkTheme: {
+  	background : '#4F9BE7'
+  }
 })

@@ -34,11 +34,11 @@
         </v-card-text>
         
           
-        <v-card-text>
+        <v-card-text class="text-xs-center">
           <h3 class="caption">My Project</h3>
         </v-card-text>
         
-        <v-card-text>
+        <v-card-text class="text-xs-right">
           <div :style="{marginRight: '-1.5em'}">
             <v-btn flat fab small :style = "{width : '0.5em'}">
               <v-icon size = '0.8em'>fas fa-play</v-icon>
@@ -70,12 +70,16 @@ export default {
   #view {
     width: 300px;
     height: 500px;
-    background-color: white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6622aa+0,2989d8+50,207cca+51,a96cc9+100 */
+    background: #6622aa; /* Old browsers */
+    background: -moz-linear-gradient(top, #6622aa 0%, #2989d8 50%, #207cca 51%, #a96cc9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #6622aa 0%,#2989d8 50%,#207cca 51%,#a96cc9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #6622aa 0%,#2989d8 50%,#207cca 51%,#a96cc9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0; 
-    top: 40px;
+    top: 80px;
   }
 </style>

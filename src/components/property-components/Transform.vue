@@ -2,32 +2,40 @@
   <div>
     <v-list-tile>
       <v-text-field
-        
+      solo
+      flat
       v-model="x"
-      label="X"
-      
+      class = 'caption'
+      :style = "{}"
+      label = 'asdasd'
     ></v-text-field>
     <v-text-field
-      
+      solo
+      flat
       v-model="y"
-      label="Y"
-      
+      class = 'caption'
+      :style = "{}"
+      label = 'asdasd'
     >
     </v-text-field>
     </v-list-tile>
     <v-list-tile>
       <v-text-field
-        
+      solo
+      flat  
       v-model="scaleX"
-      label="scale X"
-      
+      class = 'caption'
+      :style = "{}"
+      label = 'asdasd'
       
     ></v-text-field>
     <v-text-field
-      
+      solo
+      flat
       v-model="scaleY"
-      label="scale Y"
-      
+      class = 'caption'
+      :style = "{}"
+      label = 'asdasd'
     >
     </v-text-field>
     </v-list-tile>

@@ -39,8 +39,7 @@
       <hr>
       <Transform></Transform>
       <hr>
-      <Transform></Transform>
-      <hr>
+      
     </v-list>
 
   </v-navigation-drawer>
