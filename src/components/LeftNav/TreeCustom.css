@@ -40,3 +40,6 @@
     border: 0px ;
 
 }
+body{
+    overflow: hidden;
+}

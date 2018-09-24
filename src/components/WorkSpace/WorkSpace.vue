@@ -4,7 +4,7 @@
       <div id = 'scale'>
         <div class = 'view' :style="{left: '-600px'}">
         </div>
-        <div class = 'view'>  
+        <div class = 'view'>
         </div>
         <div class = 'view' :style="{left: '600px'}">
         </div>

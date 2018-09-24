@@ -224,4 +224,9 @@
   .list-file {
     margin-top: -20px;
   }
+
+  .v-dialog__content.v-dialog__content--active {
+    background-color: rgba(0,0,0,1);
+  }
+
 </style>

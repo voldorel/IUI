@@ -1,4 +1,4 @@
-<template>
+<template scroll="no">
     <div class="row">
         <div class="tree-container">
             <sl-vue-tree
@@ -101,5 +101,4 @@
 <style src="./TreeCustom.css"></style>
 
 <style scoped>
-
 </style>
