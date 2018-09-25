@@ -44,8 +44,14 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.tree-container{
+    height: 33.5em;
+}
 
-
+.tree-container:hover{
+    overflow-y: overlay;
+    -webkit-transition: all .5s;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -67,8 +73,8 @@
     background: #555;
 
 }
-/* MAGIC HAPPENS HERE */
-.scroll-bar-wrap:hover .cover-bar {
-    opacity: 0;
-    -webkit-transition: all .5s;
-}
+/*!* MAGIC HAPPENS HERE *!*/
+/*.scroll-bar-wrap:hover .cover-bar {*/
+    /*opacity: 0;*/
+    /*-webkit-transition: all .5s;*/
+/*}*/
