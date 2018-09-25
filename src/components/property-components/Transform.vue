@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style = "{marginTop : '-1em', marginLeft: '-1em'}">
     <v-list-tile>
       <v-card-text class = 'sm-text'>
         X
@@ -8,16 +8,14 @@
         Y
       </v-card-text>
     </v-list-tile>
-    <v-list-tile class = 'input1'>
+    <v-list-tile :style = "{marginTop : '-2.4em', marginLeft: '1em'}">
       <v-text-field
-      solo
-      flat
+      
       class = 'caption'
       v-model = "layer.x"
     ></v-text-field>
     <v-text-field
-      solo
-      flat
+      :style = "{marginLeft: '1em'}"
       v-model="layer.y"
       class = 'caption'
     >
@@ -31,16 +29,13 @@
         Height
       </v-card-text>
     </v-list-tile>
-    <v-list-tile class = 'input1'>
+    <v-list-tile class = 'input1' :style = "{marginTop : '-2.4em', marginLeft: '1em'}">
       <v-text-field
-      solo
-      flat  
       v-model="layer.xScale"
       class = 'caption'
     ></v-text-field>
     <v-text-field
-      solo
-      flat
+      :style = "{marginLeft: '1.1em'}"
       v-model="layer.yScale"
       class = 'caption'
     >
@@ -76,12 +71,15 @@ export default {
   .sm-text {
     font-size: 0.6em;
     color: #88878C;
-    margin-top: -4.7em;
-    margin-left: -1.5em;
+    /*margin-top: -4.7em;
+    margin-left: -1.5em;*/
     z-index: 1;
   }
   .input1 {
-    margin-left: -0.7em;
-    margin-top: -3.4em;
+    /*margin-left: -0.7em;
+    margin-top: -3.4em;*/
+  }
+  .v-text-field > .v-input__control > .v-input__slot:before, .v-text-field > .v-input__control > .v-input__slot:after {
+      content: none;
   }
 </style>
