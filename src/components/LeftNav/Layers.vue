@@ -20,8 +20,6 @@
 		name: "Layers",
         components:{
 			Tree
-        },
-        data(){
         }
 	}
 </script>

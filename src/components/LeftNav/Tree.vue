@@ -1,6 +1,6 @@
 <template >
-    <div class="row scroll-bar-wrap">
-        <div class="tree-container scroll-box">
+    <div class="row">
+        <div class="tree-container ">
             <sl-vue-tree
                     v-model="nodes"
                     ref="slVueTree"
@@ -9,8 +9,8 @@
 
                 <template slot="title" slot-scope="{ node }">
                       <span class="item-icon">
-                        <i class="fa fa-file" v-if="node.isLeaf"></i>
-                        <i class="fa fa-folder" v-if="!node.isLeaf"></i>
+                        <i class="fa fa-file file-icon" v-if="node.isLeaf"></i>
+                        <!--<i class="fa fa-folder" v-if="!node.isLeaf"></i>-->
                       </span>
 
                         {{ node.title }}
@@ -19,16 +19,16 @@
 
                 <template slot="toggle" slot-scope="{ node }">
                       <span v-if="!node.isLeaf">
-                        <i v-if="node.isExpanded" class="fa fa-chevron-down"></i>
-                        <i v-if="!node.isExpanded" class="fa fa-chevron-right"></i>
+                        <i v-if="node.isExpanded" class="fa fa-sort-down"></i>
+                        <i v-if="!node.isExpanded" class="fa fa-caret-right"></i>
                       </span>
                 </template>
 
 
                 <template slot="sidebar" slot-scope="{ node }">
                       <span class="visible-icon" @click="event => toggleVisibility(event, node)">
-                        <i v-if="!node.data || node.data.visible !== false" class="fa fa-eye"></i>
-                        <i v-if="node.data && node.data.visible === false" class="fa fa-eye-slash"></i>
+                        <i v-if="!node.data || node.data.visible !== false" class="fa fa-lock-open unlocked-file"></i>
+                        <i v-if="node.data && node.data.visible === false" class="fa fa-lock locked-file"></i>
                       </span>
                 </template>
 

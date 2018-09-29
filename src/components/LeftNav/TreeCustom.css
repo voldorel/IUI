@@ -1,3 +1,7 @@
+.sl-vue-tree{
+    font-size: 0.9em;
+    font-family: MyriadPro-Semibold;
+}
 
 .sl-vue-tree-selected > .sl-vue-tree-node-item {
     background-color: #3A9AFC;
@@ -32,7 +36,7 @@
 .item-icon {
     display: inline-block;
     text-align: left;
-    width: 20px;
+    /*width: 10px;*/
 }
 
 .sl-vue-tree.sl-vue-tree-root{
@@ -40,27 +44,57 @@
     border: 0px ;
 
 }
+.sl-vue-tree-toggle {
+    width: 7px;
+}
+.file-icon{
+    margin-right: 2px;
+}
+
+.locked-file{
+    opacity: 1;
+}
+.unlocked-file{
+    opacity: 0.1;
+}
+.unlocked-file:hover{
+    opacity: 1;
+}
+
+
+/* Section Customized Scrollbar */
+
 .v-navigation-drawer {
     overflow-y: hidden;
     overflow-x: hidden;
 }
 .tree-container{
     height: 33.5em;
+    /*height: auto;*/
 }
 
-.tree-container:hover{
+.tree-container{
     overflow-y: overlay;
-    -webkit-transition: all .5s;
+    /*-webkit-transition: all .5s;*/
+}
+
+.tree-container::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0);
+    /*-webkit-transition: all .5s;*/
+}
+
+.tree-container:hover::-webkit-scrollbar-thumb{
+    background: #1c66cb;
+    /*-webkit-transition: all .5s;*/
+}
+
+.tree-container:hover::-webkit-scrollbar {
+    width: 3px;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0);
+    width: 0px;
 }
 
 /* Handle */
@@ -68,11 +102,11 @@
     background: #1c66cb;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+    /*background: #555;*/
 
-}
+/*}*/
 /*!* MAGIC HAPPENS HERE *!*/
 /*.scroll-bar-wrap:hover .cover-bar {*/
     /*opacity: 0;*/
