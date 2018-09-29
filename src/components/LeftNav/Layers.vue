@@ -5,6 +5,7 @@
                 name="name"
                 label="search"
                 id="id"
+                class="layer-search"
         >
         </v-text-field>
         <Tree></Tree>
@@ -18,11 +19,15 @@
 
 	export default {
 		name: "Layers",
-        components:{
+		components: {
 			Tree
-        }
+		}
 	}
 </script>
+
+<style src="./Search-custom.css"></style>
+
+
 
 <style scoped>
 
