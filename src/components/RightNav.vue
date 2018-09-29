@@ -36,10 +36,11 @@
         </v-btn>
       </v-list-tile>
       <Transform></Transform>
-      <hr class="under">
+      <v-divider class = 'under'></v-divider>
       <Typography></Typography>
-      <hr class="under">
-      
+      <v-divider class = 'under'></v-divider>
+      <Blending></Blending>
+      <v-divider class = 'under'></v-divider>
     </v-list>
 
   </v-navigation-drawer>
@@ -48,6 +49,7 @@
 <script>
 import Transform from './property-components/Transform'
 import Typography from './property-components/Typography'
+import Blending from './property-components/Blending'
 export default {
   name: "RightNav",
   data () {
@@ -55,7 +57,8 @@ export default {
     }
   }, components: {
     Transform,
-    Typography
+    Typography, 
+    Blending
   }
 }
 </script>

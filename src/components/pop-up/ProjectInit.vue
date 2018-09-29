@@ -118,19 +118,19 @@
                   <v-card-text>
                     <div class="m-up"> 
                       <v-icon small> fas fa-play</v-icon>
-                      Learn
+                      <span>Learn</span>
                     </div>
                   </v-card-text>
                   <v-card-text>
                     <div class="m-up">
                       <v-icon small> fas fa-life-ring</v-icon>
-                      Support
+                      <span>Support</span>
                     </div>
                   </v-card-text>
                   <v-card-text>
                     <div class="m-up">
                       <v-icon small> fas fa-comment-dots</v-icon>
-                      Give Feedback
+                      <span>Give Feedback</span>
                     </div>
                   </v-card-text>
                 </div>
@@ -148,19 +148,19 @@
                   <v-card-text>
                     <div class="m-up">
                       <v-icon small> fas fa-columns</v-icon>
-                      Layout
+                      <span>Layout</span>
                     </div>
                   </v-card-text>
                   <v-card-text>
                     <div class="m-up">
                       <v-icon small> fas fa-chalkboard</v-icon>
-                      Animation
+                      <span>Animation</span>
                     </div>
                   </v-card-text>
                   <v-card-text>
                     <div class="m-up">
                       <v-icon small> fas fa-stream</v-icon>
-                      Scroll
+                      <span>Scroll</span>
                     </div>
                   </v-card-text>
                 </div>
@@ -195,12 +195,12 @@
     z-index: 100;
   }
   .m-left {
-    margin-left: 20px;
+    margin-left: 1em;
   }
 
   .m-up {
-    margin-top: -30px;
-    font-size: 9px;
+    margin-top: -2.4em;
+    font-size: 0.8em;
   }
   .list-title {
     font-size: 10px;
@@ -213,7 +213,7 @@
   }
 
   .m-left-d {
-    padding-top: 15px;
+    padding-top: 1.5em;
     font-size: 10px;
   }
 
@@ -222,11 +222,14 @@
   }
 
   .list-file {
-    margin-top: -20px;
+    margin-top: -1.1em;
   }
 
   .v-dialog__content.v-dialog__content--active {
     background-color: rgba(0,0,0,1);
   }
 
+  .m-up span {
+    margin-left: 1em;
+  }
 </style>

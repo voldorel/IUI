@@ -28,7 +28,7 @@
                   class = 'caption'
                   placeholder = '100%'
                   
-                  :style = "{width : '6em'}"
+                  :style = "{width : '6em', top: '0.7em'}"
                 ></v-select>
               </v-flex>
             </v-layout>

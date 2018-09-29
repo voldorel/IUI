@@ -20,13 +20,13 @@
           
           <v-flex xs3></v-flex>
           <v-flex :key="`login-bar`" align-center xs6>
-            <v-text-field label="Email address" required></v-text-field>
+            <v-text-field label="Email address" required class = 'input-bar'></v-text-field>
           </v-flex>
           <v-flex xs3></v-flex>
 
           <v-flex xs3></v-flex>
           <v-flex :key="`pass-bar`" xs6>
-            <v-text-field label="Password" type="password" required :style = '{marginTop: "-10px"}'>></v-text-field>
+            <v-text-field label="Password" type="password" required :style = '{marginTop: "-10px"}' class = 'input-bar'></v-text-field>
           </v-flex>
           <v-flex xs3></v-flex>
           <v-flex xs3></v-flex>
@@ -70,5 +70,9 @@
   .links {
     color: #ccc;
     font-size: 9px;
+  }
+
+  .input-bar.v-text-field > .v-input__control > .v-input__slot:before, .v-text-field > .v-input__control > .v-input__slot:after {
+      content: '';
   }
 </style>
