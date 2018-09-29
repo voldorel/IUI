@@ -1,6 +1,6 @@
-<template scroll="no">
-    <div class="row">
-        <div class="tree-container">
+<template >
+    <div class="row scroll-bar-wrap">
+        <div class="tree-container scroll-box">
             <sl-vue-tree
                     v-model="nodes"
                     ref="slVueTree"
@@ -8,35 +8,37 @@
             >
 
                 <template slot="title" slot-scope="{ node }">
-          <span class="item-icon">
-            <i class="fa fa-file" v-if="node.isLeaf"></i>
-            <i class="fa fa-folder" v-if="!node.isLeaf"></i>
-          </span>
+                      <span class="item-icon">
+                        <i class="fa fa-file" v-if="node.isLeaf"></i>
+                        <i class="fa fa-folder" v-if="!node.isLeaf"></i>
+                      </span>
 
-                    {{ node.title }}
+                        {{ node.title }}
                 </template>
 
 
                 <template slot="toggle" slot-scope="{ node }">
-          <span v-if="!node.isLeaf">
-            <i v-if="node.isExpanded" class="fa fa-chevron-down"></i>
-            <i v-if="!node.isExpanded" class="fa fa-chevron-right"></i>
-          </span>
+                      <span v-if="!node.isLeaf">
+                        <i v-if="node.isExpanded" class="fa fa-chevron-down"></i>
+                        <i v-if="!node.isExpanded" class="fa fa-chevron-right"></i>
+                      </span>
                 </template>
 
 
                 <template slot="sidebar" slot-scope="{ node }">
-          <span class="visible-icon" @click="event => toggleVisibility(event, node)">
-            <i v-if="!node.data || node.data.visible !== false" class="fa fa-eye"></i>
-            <i v-if="node.data && node.data.visible === false" class="fa fa-eye-slash"></i>
-          </span>
+                      <span class="visible-icon" @click="event => toggleVisibility(event, node)">
+                        <i v-if="!node.data || node.data.visible !== false" class="fa fa-eye"></i>
+                        <i v-if="node.data && node.data.visible === false" class="fa fa-eye-slash"></i>
+                      </span>
                 </template>
 
             </sl-vue-tree>
         </div>
 
+        <div class="cover-bar"></div>
 
     </div>
+
 
 </template>
 
@@ -102,25 +104,5 @@
 
 <style scoped>
 
-
-    /* width */
-    ::-webkit-scrollbar {
-        width: 5px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: rgba(0,0,0,0);
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #1c66cb;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
 
 </style>

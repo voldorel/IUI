@@ -1,14 +1,12 @@
 @require './_colors'
 
-// Theme
-// ============================================================
-$body-font-family := 'Roboto', sans-serif
+$body-font-family :=  MyriadPro, 'Roboto', sans-serif
 $font-size-root := 14px
 $line-height-root := 1.5
 
 // Material Design - https://material.io/guidelines/style/color.html#color-usability
 // ============================================================
-$material-light := {
+$material-light = {
   status-bar: {
     regular: #E0E0E0,
     lights-out: rgba(#fff, .7)
@@ -101,7 +99,7 @@ $material-light := {
   inactive-icon-percent: .38
 }
 
-$material-dark := {
+$material-dark = {
   status-bar: {
     regular: #000000,
     lights-out: rgba(#000, .2)
@@ -195,18 +193,3 @@ $material-dark := {
   active-icon-percent: 1
   inactive-icon-percent: .50
 }
-
-// Default Material Theme
-// ============================================================
-$material-theme := $material-light
-$material-twelve-percent-light := rgba($material-dark.fg-color, $material-dark.divider-percent)
-$material-twelve-percent-dark := rgba($material-light.fg-color, $material-light.divider-percent)
-
-
-// Theme
-// ============================================================
-$body-bg-light := $material-light.background
-$body-bg-dark := $material-dark.background
-$body-color-light := rgba($material-dark.text-color, $material-dark.primary-text-percent)
-$body-color-dark := rgba($material-light.text-color, $material-light.primary-text-percent)
-$color-theme := rgba($material-theme.text-color, $material-theme.primary-text-percent)
