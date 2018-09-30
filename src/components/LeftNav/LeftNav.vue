@@ -6,39 +6,58 @@
                 enable-resize-watcher
                 fixed
                 app
-                :width="180"
+                :width="144"
                 permanent
                 class="pa-0"
         >
-            <v-tabs right >
-                <v-tab href="#Layer">
+            <v-tabs
+                    v-model="active"
+                    :right="true"
+                    :hide-slider="true"
+            >
+                <v-tab
+                        :ripple="false"
+                >
                     <v-tooltip bottom>
                         <v-icon
-                                slot="activator"> fas fa-layer-group</v-icon>
+                                :size="15"
+                                slot="activator"
+                                class="topButtons"
+                        >
+                        fas fa-layer-group
+                        </v-icon>
                         <span>Layers</span>
                     </v-tooltip>
 
                 </v-tab>
+                <v-tab-item >
 
-                <v-tab href="#Components">
+                    <Layers></Layers>
+                </v-tab-item>
+
+                <v-tab
+                        :ripple="false"
+                >
                     <v-tooltip bottom>
-                        <v-icon slot="activator">
+                        <v-icon slot="activator"
+                                :size="15"
+                                class="topButtons"
+
+                        >
                             fas fa-cube
                         </v-icon>
                         <span>Components</span>
                     </v-tooltip>
                 </v-tab>
+                <v-tab-item >
+
+                    <Components></Components>
+                </v-tab-item>
             </v-tabs>
 
             <v-tabs-items>
-                <v-tab-item :id="Layers">
-                    
-                    <Layers></Layers>
-                </v-tab-item>
-                <v-tab-item :id="Components">
-                    
-                    <Components></Components>
-                </v-tab-item>
+
+
             </v-tabs-items>
 
     </v-navigation-drawer>
@@ -57,5 +76,10 @@
 </script>
 
 <style scoped>
+
+    .v-tabs__item--active i{
+        color: #578ed1;
+
+    }
 
 </style>
