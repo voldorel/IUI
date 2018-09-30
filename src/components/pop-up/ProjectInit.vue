@@ -20,7 +20,7 @@
               <v-list>
                 <v-list-tile @click = 'console.log()' class = 'list-file'>
                   <v-list-tile-action class = 'm-icon'>
-                    <v-icon small color = 'primary'>fas fa-file</v-icon>
+                    <v-icon size = '0.7em' color = 'primary'>fas fa-file</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content>
                     <p class="m-left-d grey1">
@@ -30,7 +30,7 @@
                 </v-list-tile>
                 <v-list-tile @click = 'console.log()' class = 'list-file'>
                   <v-list-tile-action class = 'm-icon'>
-                    <v-icon small>fas fa-file</v-icon>
+                    <v-icon size = '0.7em'>fas fa-file</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content>
                     <p class="m-left-d grey1">
@@ -40,7 +40,7 @@
                 </v-list-tile>
                 <v-list-tile @click = 'console.log()' class = 'list-file'>
                   <v-list-tile-action class = 'm-icon'>
-                    <v-icon small>fas fa-file</v-icon>
+                    <v-icon size = '0.7em'>fas fa-file</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content>
                     <p class="m-left-d grey1">
@@ -76,16 +76,28 @@
           <v-layout row wrap :style = '{fontSize: "10px", marginLeft: "30px"}' class="m-left">
             
             <v-flex xs2>
-              <img src="https://png.icons8.com/ios/50/ffffff/iphone-x-filled.png">
+              <img
+                src="./../../assets/iPhonex.png"
+                :style = "{height: '6em', paddingTop: '2.5em'}"
+              />
             </v-flex>
             <v-flex xs2>
-              <img src="https://png.icons8.com/ios/50/ffffff/mac-client.png">
+              <img
+                src="./../../assets/iPad.png"
+                :style = "{height: '5.5em', paddingTop: '1.6em'}"
+              />
             </v-flex>
             <v-flex xs2>
-              <img src="https://png.icons8.com/ios/50/ffffff/ipad-filled.png">
+              <img
+                src="./../../assets/mac.png"
+                :style = "{height: '5.2em', paddingTop: '2em'}"
+              />
             </v-flex>
             <v-flex xs2>
-              <img src="https://png.icons8.com/ios/50/ffffff/create-new.png">
+              <img
+                src="./../../assets/blank.png"
+                :style = "{height: '5.2em', paddingTop: '2em'}"
+              />
             </v-flex>
             <v-flex xs4>
             </v-flex>
@@ -218,11 +230,11 @@
   }
 
   .m-icon {
-    margin-right: -30px;
+    margin-right: -2.8em;
   }
 
   .list-file {
-    margin-top: -1.1em;
+    margin-top: -1.8em;
   }
 
   .v-dialog__content.v-dialog__content--active {
