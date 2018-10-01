@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2>Layers</h2>
         <v-text-field
                 name="name"
                 label="Search My Project"
