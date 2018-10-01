@@ -1,0 +1,42 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 30/09/2018 11:56
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-object-alignment:before { content: "\f100"; }
+.flaticon-alignment:before { content: "\f101"; }
+.flaticon-object-alignment-1:before { content: "\f102"; }
+.flaticon-align:before { content: "\f103"; }
+.flaticon-edit-tools:before { content: "\f104"; }
+.flaticon-object:before { content: "\f105"; }
+.flaticon-ui:before { content: "\f106"; }
+.flaticon-edit-tools-1:before { content: "\f107"; }
+.flaticon-align-1:before { content: "\f108"; }
+.flaticon-object-alignment-2:before { content: "\f109"; }
+.flaticon-ui-1:before { content: "\f10a"; }

@@ -11,7 +11,7 @@
     <v-list :style ="{marginTop: '-20px', marginLeft: '-10px'}">
       <v-list-tile>
         <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-align-left</v-icon>
+          <!-- <v-icon class=".flaticon-object-alignment"></v-icon> -->
         </v-btn>
         <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
           <v-icon size = '0.8em'>fas fa-align-center</v-icon>
