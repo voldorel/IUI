@@ -5,7 +5,7 @@
     v-model="rightDrawer"
     fixed
     app
-    :width="175"
+    :width="drawerWidth"
     permanent
   >
     <v-list :style ="{marginTop: '-20px', marginLeft: '-10px'}">
@@ -73,11 +73,20 @@ export default {
   data () {
     return {
     }
-  }, components: {
+  },
+    components: {
     Transform,
     Typography, 
     Blending
-  }
+  },
+    computed:{
+        drawerWidth(){
+            let width =  0.135 * this.$vuetify.breakpoint.width;
+            width = Math.max(width, 150);
+            width = Math.min(width, 300);
+            return width;
+        }
+    }
 }
 </script>
 
