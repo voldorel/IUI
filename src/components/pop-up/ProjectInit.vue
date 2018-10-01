@@ -7,7 +7,7 @@
         <v-btn icon small @click.native="dialog = false" :style="{width: '10px', height: '10px'}" class = 'grey1'>
           <v-icon size = '8px'>fas fa-times</v-icon>
         </v-btn>
-        <v-container grid-list-md text-xs-center>
+        <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs3>
             <v-navigation-drawer 
@@ -17,42 +17,45 @@
             :style="{width : '28%'}"
             permanent
             >
-              <v-list>
-                <v-list-tile @click = 'console.log()' class = 'list-file'>
-                  <v-list-tile-action class = 'm-icon'>
-                    <v-icon size = '0.7em' color = 'primary'>fas fa-file</v-icon>
-                  </v-list-tile-action>
-                  <v-list-tile-content>
-                    <p class="m-left-d grey1">
-                      new file
-                    </p>
-                  </v-list-tile-content>
-                </v-list-tile>
-                <v-list-tile @click = 'console.log()' class = 'list-file'>
-                  <v-list-tile-action class = 'm-icon'>
-                    <v-icon size = '0.7em'>fas fa-file</v-icon>
-                  </v-list-tile-action>
-                  <v-list-tile-content>
-                    <p class="m-left-d grey1">
-                      124124b34643573
-                    </p>
-                  </v-list-tile-content>
-                </v-list-tile>
-                <v-list-tile @click = 'console.log()' class = 'list-file'>
-                  <v-list-tile-action class = 'm-icon'>
-                    <v-icon size = '0.7em'>fas fa-file</v-icon>
-                  </v-list-tile-action>
-                  <v-list-tile-content>
-                    <p class="m-left-d grey1">
-                      Untitled
-                    </p>
-                  </v-list-tile-content>
-                </v-list-tile>
-              </v-list>
-              <v-footer fixed :style = '{fontSize: "10px", textAlign: "center"}'>
+              <!--<v-list class="mt-2"-->
+              <!--:dense="false">-->
+                <!--<v-list-tile @click = 'console.log()' class = 'list-file'>-->
+                  <!--<v-list-tile-action class = 'm-icon'>-->
+                    <!--<v-icon size = '0.7em' color = 'primary'>fas fa-file</v-icon>-->
+                  <!--</v-list-tile-action>-->
+                  <!--<v-list-tile-content>-->
+                    <!--<p class="m-left-d grey1">-->
+                      <!--new file-->
+                    <!--</p>-->
+                  <!--</v-list-tile-content>-->
+                <!--</v-list-tile>-->
+                <!--<v-list-tile @click = 'console.log()' class = 'list-file'>-->
+                  <!--<v-list-tile-action class = 'm-icon'>-->
+                    <!--<v-icon size = '0.7em'>fas fa-file</v-icon>-->
+                  <!--</v-list-tile-action>-->
+                  <!--<v-list-tile-content>-->
+                    <!--<p class="m-left-d grey1">-->
+                      <!--124124b34643573-->
+                    <!--</p>-->
+                  <!--</v-list-tile-content>-->
+                <!--</v-list-tile>-->
+                <!--<v-list-tile @click = 'console.log()' class = 'list-file'>-->
+                  <!--<v-list-tile-action class = 'm-icon'>-->
+                    <!--<v-icon size = '0.7em'>fas fa-file</v-icon>-->
+                  <!--</v-list-tile-action>-->
+                  <!--<v-list-tile-content>-->
+                    <!--<p class="m-left-d grey1">-->
+                      <!--Untitled-->
+                    <!--</p>-->
+                  <!--</v-list-tile-content>-->
+                <!--</v-list-tile>-->
+              <!--</v-list>-->
+              <FileList class="mt-2"></FileList>
+              <v-footer fixed :style = '{fontSize: "10px", textAlign: "center"}' color="rgba(0,0,0,0)">
                  <v-flex
                     text-xs-center
                     xs12
+                    :style = '{backgroundColor:"rgba(0,0,0,0)"}'
                   >
                   <a class="grey1">Open IUI file or PSD file</a>
                 </v-flex>
@@ -72,9 +75,8 @@
             :key="index"
             inset
           ></v-divider>
-        </v-layout>
-          <v-layout row wrap :style = '{fontSize: "10px", marginLeft: "30px"}' class="m-left">
-            
+        </v-layout >
+          <v-layout row wrap :style = '{fontSize: "10px", marginLeft: "30px"}' class="m-left"  text-xs-center>
             <v-flex xs2>
               <img
                 src="./../../assets/iPhonex.png"
@@ -193,10 +195,15 @@
 
 
 <script>
-  export default {
+    import FileList from './FileList';
+
+    export default {
     data: () => ({
       dialog: false
-    })
+    }),
+    components: {
+      FileList
+    }
   }
 </script>
 
