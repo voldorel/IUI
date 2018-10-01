@@ -65,16 +65,31 @@
 /* Section Customized Scrollbar */
 
 .v-navigation-drawer {
-    overflow-y: hidden;
-    overflow-x: hidden;
+    /*height: 100vh !important;*/
+    overflow-y: overlay;
+    /*overflow-x: hidden;*/
 }
+
+.v-navigation-drawer::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0);
+}
+
+.v-navigation-drawer:hover::-webkit-scrollbar-thumb{
+    background: #1c66cb;
+}
+
+.v-navigation-drawer:hover::-webkit-scrollbar {
+    width: 3px;
+}
+
+
 .tree-container{
-    height: 33.5em;
+    /*height: 33.5em;*/
     /*height: auto;*/
 }
 
 .tree-container{
-    overflow-y: overlay;
+    /*overflow-y: scroll;*/
     /*-webkit-transition: all .5s;*/
 }
 

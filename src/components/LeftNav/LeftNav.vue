@@ -23,6 +23,7 @@
                                 :size="15"
                                 slot="activator"
                                 class="topButtons"
+                                id="btn"
                         >
                         fas fa-layer-group
                         </v-icon>
@@ -31,7 +32,6 @@
 
                 </v-tab>
                 <v-tab-item >
-
                     <Layers></Layers>
                 </v-tab-item>
 
@@ -42,7 +42,6 @@
                         <v-icon slot="activator"
                                 :size="15"
                                 class="topButtons"
-
                         >
                             fas fa-cube
                         </v-icon>
@@ -50,15 +49,9 @@
                     </v-tooltip>
                 </v-tab>
                 <v-tab-item >
-
                     <Components></Components>
                 </v-tab-item>
             </v-tabs>
-
-            <v-tabs-items>
-
-
-            </v-tabs-items>
 
     </v-navigation-drawer>
 </template>
@@ -74,11 +67,17 @@
         },
         computed:{
             drawerWidth(){
-                return 0.135 * this.$vuetify.breakpoint.width;
+                let width =  0.135 * this.$vuetify.breakpoint.width;
+                width = Math.max(width, 150);
+                width = Math.min(width, 300);
+                return width;
             }
         }
 	}
 </script>
+
+<style src="./NavCustom.css"></style>
+
 
 <style scoped>
 
@@ -86,5 +85,19 @@
         color: #578ed1;
 
     }
+
+    i.v-icon.topButtons.theme--dark {
+        padding: 6px 6px 6px 6px;
+        /* margin: 20px; */
+    }
+
+    i.v-icon.topButtons.fas.fa-cube.theme--dark {
+        margin-right: 8px;
+    }
+    i.v-icon.topButtons{
+        border-radius: 3px;
+        background: #1b1f22;
+    }
+
 
 </style>
