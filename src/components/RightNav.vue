@@ -93,4 +93,9 @@ export default {
     font-size: 70em !important;
 
   }
+
+  .v-btn:before {
+    opacity: 0.9 !important;
+    color: #090C11;
+  }
 </style>

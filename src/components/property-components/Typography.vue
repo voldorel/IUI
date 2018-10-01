@@ -197,6 +197,7 @@ export default {
     color: inherit;
     content: '';
     position: absolute;
+    opacity: 0.1 !important;
     left: auto;
     top: auto;
     height: 50%;
@@ -204,5 +205,8 @@ export default {
     -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
     width: 50%;
+  }
+  select {
+    color: red!important;
   }
 </style>
