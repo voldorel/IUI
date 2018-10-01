@@ -3,10 +3,11 @@
         <h2>Layers</h2>
         <v-text-field
                 name="name"
-                label="search"
+                label="Search My Project"
                 id="id"
-                class="layer-search"
+                class="mx-2"
         >
+
         </v-text-field>
         <Tree></Tree>
 

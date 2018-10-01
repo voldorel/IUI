@@ -6,7 +6,7 @@
                 enable-resize-watcher
                 fixed
                 app
-                :width="144"
+                :width="drawerWidth"
                 permanent
                 class="pa-0"
         >
@@ -71,6 +71,11 @@
         components:{
 			Components,
             Layers
+        },
+        computed:{
+            drawerWidth(){
+                return 0.135 * this.$vuetify.breakpoint.width;
+            }
         }
 	}
 </script>
