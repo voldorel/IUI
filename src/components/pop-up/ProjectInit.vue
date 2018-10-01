@@ -3,7 +3,6 @@
     <v-dialog v-model="dialog" persistent max-width="590">
       <v-btn slot="activator" dark>Create Project</v-btn>
       <v-card>
-
         <v-btn icon small @click.native="dialog = false" :style="{width: '10px', height: '10px'}" class = 'grey1'>
           <v-icon size = '8px'>fas fa-times</v-icon>
         </v-btn>
@@ -12,67 +11,38 @@
           <v-flex xs3>
             <v-navigation-drawer 
             absolute
-            right
+            :right="true"
             height="100%"
             :style="{width : '28%'}"
             permanent
             >
-              <!--<v-list class="mt-2"-->
-              <!--:dense="false">-->
-                <!--<v-list-tile @click = 'console.log()' class = 'list-file'>-->
-                  <!--<v-list-tile-action class = 'm-icon'>-->
-                    <!--<v-icon size = '0.7em' color = 'primary'>fas fa-file</v-icon>-->
-                  <!--</v-list-tile-action>-->
-                  <!--<v-list-tile-content>-->
-                    <!--<p class="m-left-d grey1">-->
-                      <!--new file-->
-                    <!--</p>-->
-                  <!--</v-list-tile-content>-->
-                <!--</v-list-tile>-->
-                <!--<v-list-tile @click = 'console.log()' class = 'list-file'>-->
-                  <!--<v-list-tile-action class = 'm-icon'>-->
-                    <!--<v-icon size = '0.7em'>fas fa-file</v-icon>-->
-                  <!--</v-list-tile-action>-->
-                  <!--<v-list-tile-content>-->
-                    <!--<p class="m-left-d grey1">-->
-                      <!--124124b34643573-->
-                    <!--</p>-->
-                  <!--</v-list-tile-content>-->
-                <!--</v-list-tile>-->
-                <!--<v-list-tile @click = 'console.log()' class = 'list-file'>-->
-                  <!--<v-list-tile-action class = 'm-icon'>-->
-                    <!--<v-icon size = '0.7em'>fas fa-file</v-icon>-->
-                  <!--</v-list-tile-action>-->
-                  <!--<v-list-tile-content>-->
-                    <!--<p class="m-left-d grey1">-->
-                      <!--Untitled-->
-                    <!--</p>-->
-                  <!--</v-list-tile-content>-->
-                <!--</v-list-tile>-->
-              <!--</v-list>-->
+
               <FileList class="mt-2"></FileList>
+
               <v-footer fixed :style = '{fontSize: "10px", textAlign: "center"}' color="rgba(0,0,0,0)">
                  <v-flex
                     text-xs-center
                     xs12
-                    :style = '{backgroundColor:"rgba(0,0,0,0)"}'
                   >
+                   <v-divider class="mb-1"></v-divider>
                   <a class="grey1">Open IUI file or PSD file</a>
                 </v-flex>
               </v-footer>
+
             </v-navigation-drawer>
           </v-flex>
+
           <v-flex :key="`title`" xs12 :style="{textAlign : 'left'}">
             <div :style="{marginTop: '-50px'}" class="m-left">
               <p :style = '{fontSize : "30px"}'><strong>IUI</strong></p>
               <p class="grey1" :style = '{fontSize : "8px", marginTop: "-25px"}'><mark :style='{backgroundColor : "#ee44aa"}'>Interactive User Interface</mark></p>
             </div>
           </v-flex>
+
           <v-flex align-center xs12 :style="{textAlign : 'left', fontSize: '12px'}" class="grey1">
             <p class="m-left">Start something new</p>
           </v-flex>
           <v-divider
-            :key="index"
             inset
           ></v-divider>
         </v-layout >
@@ -251,4 +221,12 @@
   .m-up span {
     margin-left: 1em;
   }
+  .v-card.theme--dark {
+    background-color: #1d1b1e;
+  }
+
+  .v-navigation-drawer__border {
+    opacity: 0;
+  }
+
 </style>
