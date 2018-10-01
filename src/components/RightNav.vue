@@ -10,30 +10,48 @@
   >
     <v-list :style ="{marginTop: '-20px', marginLeft: '-10px'}">
       <v-list-tile>
+        <!-- <div :style ="{marginLeft: '-1em', marginTop: }"> -->
         <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <!-- <v-icon class=".flaticon-object-alignment"></v-icon> -->
-        </v-btn>
-        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-align-center</v-icon>
-        </v-btn>
-        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-align-right</v-icon>
-        </v-btn>
-        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-sort-amount-down</v-icon>
-        </v-btn>
-        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-sort-amount-up</v-icon>
-        </v-btn>
-        <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-paragraph</v-icon>
-        </v-btn>
-        <v-btn flat fab small disabled :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-pen</v-icon>
-        </v-btn>
-        <v-btn flat fab small disabled :style ="{width : '5px', height: '5px'}">
-          <v-icon size = '0.8em'>fas fa-pen-fancy</v-icon>
-        </v-btn>
+          <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+            <i aria-hidden="true" class="flaticon-edit-tools" :style="{width: '1em', fontSize: '0.013em'}"></i>
+          </div>
+          </v-btn>
+          <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-object-alignment-2" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+          <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-ui" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+          <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-object-alignment-1" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+          <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-ui-1" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+          <v-btn flat fab small :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-align" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+          <v-btn flat fab small disabled :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-object-alignment-1" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+          <v-btn flat fab small disabled :style ="{width : '5px', height: '5px'}">
+            <div :style ="{marginLeft: '-2em', marginTop: '-0.3em'}">
+              <i aria-hidden="true" class="flaticon-object-alignment-1" :style="{width: '1em', fontSize: '0.013em'}"></i>
+            </div>
+          </v-btn>
+        <!-- </div> -->
       </v-list-tile>
       <Transform></Transform>
       <v-divider class = 'under'></v-divider>
@@ -67,5 +85,12 @@ export default {
   
   .under {
     margin-bottom: 1em;
+  }
+  .flaticon-object-alignment::before{
+    font-size: 100em !important;
+  }
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 70em !important;
+
   }
 </style>
