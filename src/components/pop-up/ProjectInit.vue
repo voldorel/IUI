@@ -9,12 +9,13 @@
         <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs3>
-            <v-navigation-drawer 
+            <v-navigation-drawer
             absolute
             :right="true"
             height="100%"
             :style="{width : '28%'}"
             permanent
+            :floating="true"
             >
 
               <FileList class="mt-2"></FileList>
@@ -24,8 +25,8 @@
                     text-xs-center
                     xs12
                   >
-                   <v-divider class="mb-1"></v-divider>
-                  <a class="grey1">Open IUI file or PSD file</a>
+                   <v-divider class="mb-2"></v-divider>
+                  <a class="grey1" >Open IUI file or PSD file</a>
                 </v-flex>
               </v-footer>
 
@@ -34,128 +35,19 @@
 
           <v-flex :key="`title`" xs12 :style="{textAlign : 'left'}">
             <div :style="{marginTop: '-50px'}" class="m-left">
-              <p :style = '{fontSize : "30px"}'><strong>IUI</strong></p>
-              <p class="grey1" :style = '{fontSize : "8px", marginTop: "-25px"}'><mark :style='{backgroundColor : "#ee44aa"}'>Interactive User Interface</mark></p>
+              <p :style = '{fontSize : "30px", marginBottom:"0px"}'><strong>IUI</strong></p>
+              <p style="font-size: 8px; width: 100px; background-color: #f83964; color: #ccc;">Interactive User Interface</p>
             </div>
           </v-flex>
 
-          <v-flex align-center xs12 :style="{textAlign : 'left', fontSize: '12px'}" class="grey1">
-            <p class="m-left">Start something new</p>
+          <v-flex xs12 :style="{textAlign : 'left', fontSize: '12px'}" class="grey1">
+            <p class="m-left" style="margin-bottom: 5px">Start something new</p>
           </v-flex>
         </v-layout >
-            <hr :style="{margin:'0px 170px 0px 0px'}">
-          <v-layout row wrap :style = '{fontSize: "10px", marginLeft: "30px"}' class="m-left"  text-xs-center>
-            <v-flex xs2>
-              <img
-                src="./../../assets/iPhonex.png"
-                :style = "{height: '6em', paddingTop: '2.5em'}"
-              />
-            </v-flex>
-            <v-flex xs2>
-              <img
-                src="./../../assets/iPad.png"
-                :style = "{height: '5.5em', paddingTop: '1.6em'}"
-              />
-            </v-flex>
-            <v-flex xs2>
-              <img
-                src="./../../assets/mac.png"
-                :style = "{height: '5.2em', paddingTop: '2em'}"
-              />
-            </v-flex>
-            <v-flex xs2>
-              <img
-                src="./../../assets/blank.png"
-                :style = "{height: '5.2em', paddingTop: '2em'}"
-              />
-            </v-flex>
-            <v-flex xs4>
-            </v-flex>
-            <v-flex xs2>
-              iPhone X
-            </v-flex>
-            <v-flex xs2>
-              iMac
-            </v-flex>
-            <v-flex xs2>
-              iPad Air/ Mini
-            </v-flex>
-            <v-flex xs2>
-              Blank Canvas
-            </v-flex>
-            <v-flex xs4>
-            </v-flex>
-            <!--<v-divider-->
-            <!--:key="index"-->
-            <!--inset-->
-          <!--&gt;-->
-            <!--</v-divider>-->
-          </v-layout>
-
-            <hr :style="{margin:'0px 170px 0px 0px'}">
-
-            <div :style="{marginBottom: '-10px'}">
-            <v-layout row wrap :style = '{fontSize: "12px", textAlign: "left"}'>
-              <v-flex xs4 class="m-left" :style = "{marginBottom: '-20px'}">
-                <p class = "list-title">
-                  Resources
-                </p>
-                <div :style="{marginTop: '20px'}">
-                  <v-card-text>
-                    <div class="m-up"> 
-                      <v-icon small> fas fa-play</v-icon>
-                      <span>Learn</span>
-                    </div>
-                  </v-card-text>
-                  <v-card-text>
-                    <div class="m-up">
-                      <v-icon small> fas fa-life-ring</v-icon>
-                      <span>Support</span>
-                    </div>
-                  </v-card-text>
-                  <v-card-text>
-                    <div class="m-up">
-                      <v-icon small> fas fa-comment-dots</v-icon>
-                      <span>Give Feedback</span>
-                    </div>
-                  </v-card-text>
-                </div>
-              </v-flex>
-              <v-divider
-                :key="index"
-                inset
-                vertical
-              ></v-divider>
-              <v-flex xs4 :style = "{marginBottom: '-20px'}">
-                <p class = "list-title">
-                  Tutorials
-                </p>
-                <div :style="{marginTop: '20px'}">
-                  <v-card-text>
-                    <div class="m-up">
-                      <v-icon small> fas fa-columns</v-icon>
-                      <span>Layout</span>
-                    </div>
-                  </v-card-text>
-                  <v-card-text>
-                    <div class="m-up">
-                      <v-icon small> fas fa-chalkboard</v-icon>
-                      <span>Animation</span>
-                    </div>
-                  </v-card-text>
-                  <v-card-text>
-                    <div class="m-up">
-                      <v-icon small> fas fa-stream</v-icon>
-                      <span>Scroll</span>
-                    </div>
-                  </v-card-text>
-                </div>
-              </v-flex>
-              <v-flex xs4>
-                
-              </v-flex>
-            </v-layout>
-          </div>
+            <hr class="custom" :style="{margin:'0px 170px 0px 0px'}">
+            <Deviceicons></Deviceicons>
+            <hr class="custom" :style="{margin:'0px 170px 0px 0px'}">
+            <BottomIcons></BottomIcons>
         </v-container>
       </v-card>
     </v-dialog>
@@ -168,20 +60,24 @@
 
 <script>
     import FileList from './FileList';
+    import Deviceicons from './DeviceIcons'
+    import BottomIcons from './BottomIcons'
 
     export default {
     data: () => ({
       dialog: false
     }),
     components: {
-      FileList
+      FileList,
+      Deviceicons,
+      BottomIcons
     }
   }
 </script>
 
 
 
-<style>
+<style scoped>
   #init-pop-up {
     z-index: 100;
   }
@@ -189,15 +85,6 @@
     margin-left: 1em;
   }
 
-  .m-up {
-    margin-top: -2.4em;
-    font-size: 0.8em;
-  }
-  .list-title {
-    font-size: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-  }
 
   .grey1 {
     color: #ccc;
@@ -220,17 +107,11 @@
     background-color: rgba(0,0,0,1);
   }
 
-  .m-up span {
-    margin-left: 1em;
-  }
   .v-card.theme--dark {
     background-color: #1d1b1e;
   }
 
-  .v-navigation-drawer__border {
-    opacity: 0;
-  }
-  hr{
+  hr.custom{
     opacity:0.5;
     height: 1px;
     border: none;
