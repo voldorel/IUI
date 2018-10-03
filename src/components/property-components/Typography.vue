@@ -45,13 +45,19 @@
         </v-menu>
       </v-card-text>
       <v-card-text class = 'text-xs-right'>
-        <div :style="{backgroundColor: colors.hex, width: '2em', height: '1.1em', borderRadius: '0.3em', marginTop: '-2.8em', marginLeft: '1em'}" @click ='showSketch = !showSketch'>
+        <div :style="{backgroundColor: colors.hex, width: '2em', height: '1.1em', borderRadius: '0.3em', marginTop: '-2.8em', marginLeft: '1em'}" @click ='showSketch = true'>
         </div>
       </v-card-text>
-      <transition name = 'fade'>
-        <Sketch v-model = 'colors' id = "sketch-picker" v-show = 'showSketch'
-        @click.native = "showSketch = !showSketch"></Sketch>
-      </transition>
+        <v-dialog
+        hide-overlay
+        v-model="showSketch"
+        max-width="500px"
+        transition="dialog-transition"
+        >
+          <Sketch v-model = 'colors' id = "sketch-picker" v-show = 'showSketch'
+          :style = "{right: '1em', top: '16em'}"
+          ></Sketch>  
+        </v-dialog>
     </v-list-tile>
     <div :style = "{marginTop : '-3.4em', marginLeft : '-0.5em', marginBottom : '-2.5em'}">
       <v-list-tile>
@@ -233,11 +239,5 @@ export default {
     z-index: 50;
     position: absolute;
     width: 10em;
-  }
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
   }
 </style>
