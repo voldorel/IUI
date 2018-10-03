@@ -44,6 +44,14 @@
           </v-list>
         </v-menu>
       </v-card-text>
+      <v-card-text class = 'text-xs-right'>
+        <div :style="{backgroundColor: colors.hex, width: '2em', height: '1.1em', borderRadius: '0.3em', marginTop: '-2.8em', marginLeft: '1em'}" @click ='showSketch = !showSketch'>
+        </div>
+      </v-card-text>
+      <transition name = 'fade'>
+        <Sketch v-model = 'colors' id = "sketch-picker" v-show = 'showSketch'
+        @click.native = "showSketch = !showSketch"></Sketch>
+      </transition>
     </v-list-tile>
     <div :style = "{marginTop : '-3.4em', marginLeft : '-0.5em', marginBottom : '-2.5em'}">
       <v-list-tile>
@@ -168,6 +176,7 @@
 
 
 <script>
+import { Sketch } from 'vue-color'
 export default {
   data () {
     return {
@@ -180,8 +189,19 @@ export default {
       sel1 : 0,
       sel2 : 0,
       sel3 : 0,
-      sel4 : 0
+      sel4 : 0,
+      showSketch: false,
+      colors: {
+        hex: '#194d33',
+        hsl: { h: 150, s: 0.5, l: 0.2, a: 1 },
+        hsv: { h: 150, s: 0.66, v: 0.30, a: 1 },
+        rgba: { r: 25, g: 77, b: 51, a: 1 },
+        a: 1
+      }
     }
+  },
+  components: {
+    Sketch
   }
 }
 </script>
@@ -208,5 +228,16 @@ export default {
   }
   select {
     color: red!important;
+  }
+  #sketch-picker {
+    z-index: 50;
+    position: absolute;
+    width: 10em;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 </style>
