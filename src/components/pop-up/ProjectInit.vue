@@ -42,10 +42,8 @@
           <v-flex align-center xs12 :style="{textAlign : 'left', fontSize: '12px'}" class="grey1">
             <p class="m-left">Start something new</p>
           </v-flex>
-          <v-divider
-            inset
-          ></v-divider>
         </v-layout >
+            <hr :style="{margin:'0px 170px 0px 0px'}">
           <v-layout row wrap :style = '{fontSize: "10px", marginLeft: "30px"}' class="m-left"  text-xs-center>
             <v-flex xs2>
               <img
@@ -87,12 +85,16 @@
             </v-flex>
             <v-flex xs4>
             </v-flex>
-            <v-divider
-            :key="index"
-            inset
-          ></v-divider>
+            <!--<v-divider-->
+            <!--:key="index"-->
+            <!--inset-->
+          <!--&gt;-->
+            <!--</v-divider>-->
           </v-layout>
-          <div :style="{marginBottom: '-10px'}">
+
+            <hr :style="{margin:'0px 170px 0px 0px'}">
+
+            <div :style="{marginBottom: '-10px'}">
             <v-layout row wrap :style = '{fontSize: "12px", textAlign: "left"}'>
               <v-flex xs4 class="m-left" :style = "{marginBottom: '-20px'}">
                 <p class = "list-title">
@@ -227,6 +229,13 @@
 
   .v-navigation-drawer__border {
     opacity: 0;
+  }
+  hr{
+    opacity:0.5;
+    height: 1px;
+    border: none;
+    background-color: #333;
+    color: #333;
   }
 
 </style>

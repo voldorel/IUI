@@ -107,4 +107,9 @@ export default {
     opacity: 0.9 !important;
     color: #090C11;
   }
+
+  button.v-btn.v-btn--active.theme--dark {
+    color: #3A9AFC;
+  }
+
 </style>
