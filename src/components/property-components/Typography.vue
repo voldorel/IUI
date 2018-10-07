@@ -51,7 +51,7 @@
         <v-dialog
         hide-overlay
         v-model="showSketch"
-        max-width="500px"
+        :width="10"
         transition="dialog-transition"
         >
           <Sketch v-model = 'colors' id = "sketch-picker" v-show = 'showSketch'
@@ -211,7 +211,9 @@ export default {
   }
 }
 </script>
-<style>
+<style src="./custom.css"></style>
+
+<style scoped>
   .small-text {
     font-size: 0.8em;
     text-transform: none;
@@ -240,4 +242,6 @@ export default {
     position: absolute;
     width: 10em;
   }
+
+
 </style>
