@@ -12,7 +12,7 @@
 
 <script>
 import WorkSpace from './components/WorkSpace/WorkSpace'
-import RightNav from './components/RightNav'
+import RightNav from './components/RightNav/RightNav'
 import LeftNav from './components/LeftNav/LeftNav'
 import Login from './components/pop-up/Login'
 import ProjectInit from './components/pop-up/ProjectInit'
@@ -47,5 +47,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

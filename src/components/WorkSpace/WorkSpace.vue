@@ -12,7 +12,6 @@
     </v-layout>
     <v-toolbar
       app
-      flat
       height = '32em'
     >
         <Tools></Tools>
@@ -29,7 +28,7 @@
                   class = 'caption'
                   placeholder = '100%'
                   
-                  :style = "{width : '6em'}"
+                  :style = "{width : '6em', top: '0.7em'}"
                 ></v-select>
               </v-flex>
             </v-layout>
@@ -72,7 +71,7 @@ export default {
 <style>
   .view {
     width: 250px;
-    height: 400px;
+    height: 430px;
     background: #6622aa; /* Old browsers */
     background: -moz-linear-gradient(top, #6622aa 0%, #2989d8 50%, #207cca 51%, #a96cc9 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #6622aa 0%,#2989d8 50%,#207cca 51%,#a96cc9 100%); /* Chrome10-25,Safari5.1-6 */
@@ -82,6 +81,6 @@ export default {
     margin-right: auto;
     left: 0;
     right: 0; 
-    top: 140px;
+    top: 110px;
   }
 </style>
