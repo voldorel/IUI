@@ -1,12 +1,13 @@
 <template>
   <v-container>
     <v-layout row wrap>
-      <div id = 'scale'>
-        <div class = 'view' :style="{left: '-600px'}">
-        </div>
-        <div class = 'view'>
-        </div>
-        <div class = 'view' :style="{left: '600px'}">
+      <div id = 'container'>
+        <div id = 'zoom'>
+          
+          <div id = 'underlay' @click= "test($event)" ref = 'zoom'>
+            <!-- <div class="cube"></div> -->
+          </div>
+          <!-- <div class = 'app-board'></div> -->
         </div>
       </div>
     </v-layout>
@@ -54,33 +55,74 @@
   </v-container>
 </template>
 <script>
+import Vue from 'vue'
 import Tools from './Tools'
+import Cube from './objects/cube'
 export default {
   data: () => ({
+    idCounter: 0,
+    selectedId: 0,
     zoom: 100,
-    zoomOptions: ['12%', '25%', '50%', '100%', '200%']
+    zoomOptions: ['12%', '25%', '50%', '100%', '200%'],
+    bgc: {
+      backgroundColor: ''
+    },
+    children: [],
+    counter: 0
   }),
+  methods: {
+
+    test: function(e) {
+      var ComponentClass = Vue.extend(Cube)
+      var instance = new ComponentClass()
+      instance.$mount()
+      var t = this.idCounter.toString();
+      var tid = '#' + t;
+      this.idCounter++;
+      instance.$el.id = t;
+      this.$refs.zoom.appendChild(instance.$el)
+      $(tid).css({"background-color": "#ccc",
+          "left": e.clientX - 180,
+          "top": e.pageY - 30
+          }
+        );
+    }
+  },
   props: {
     msg: String
   }
   ,components:{
-    Tools
+    Tools,
+    Cube
   }
 }
 </script>
 <style>
-  .view {
-    width: 250px;
+  .app-board {
+    width: 220px;
     height: 430px;
     background: #6622aa; /* Old browsers */
     background: -moz-linear-gradient(top, #6622aa 0%, #2989d8 50%, #207cca 51%, #a96cc9 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #6622aa 0%,#2989d8 50%,#207cca 51%,#a96cc9 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #6622aa 0%,#2989d8 50%,#207cca 51%,#a96cc9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    left: 0;
+    right: 0; 
+  }
+  #underlay {
+    /*background-color: white;*/
+    position:fixed;
+    
+    width: 100%;
+    height: 100%;
+  }
+  #zoom {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0; 
     top: 110px;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
   }
 </style>
