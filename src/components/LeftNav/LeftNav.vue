@@ -31,7 +31,9 @@
                     </v-tooltip>
 
                 </v-tab>
-                <v-tab-item >
+                <v-tab-item
+                        id="layers"
+                >
                     <Layers></Layers>
                 </v-tab-item>
 
@@ -48,7 +50,9 @@
                         <span>Components</span>
                     </v-tooltip>
                 </v-tab>
-                <v-tab-item >
+                <v-tab-item
+                    id="components"
+                >
                     <Components></Components>
                 </v-tab-item>
             </v-tabs>

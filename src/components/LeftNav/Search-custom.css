@@ -3,3 +3,16 @@
     /*background-color: #1e1e20;*/
     /*!*margin-left: 0.5em;*!*/
 /*}*/
+
+i.v-icon.fas.fa-angle-left.theme--dark {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    /*position: fixed;*/
+}
+
+#layers label.v-label.theme--dark {
+    font-size: small;
+}
+#components label.v-label.theme--dark {
+     font-size: small;
+ }
