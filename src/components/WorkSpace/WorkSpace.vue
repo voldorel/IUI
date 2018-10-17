@@ -3,11 +3,8 @@
     <v-layout row wrap>
       <div id = 'container'>
         <div id = 'zoom'>
-          
-          <div id = 'underlay' @click= "test($event)" ref = 'zoom'>
-            <!-- <div class="cube"></div> -->
+          <div id = 'underlay' @click= "Create($event)" ref = 'zoom'>
           </div>
-          <!-- <div class = 'app-board'></div> -->
         </div>
       </div>
     </v-layout>
@@ -58,8 +55,11 @@
 import Vue from 'vue'
 import Tools from './Tools'
 import Cube from './objects/cube'
+import Artboard from './objects/Artboard'
+import VueDraggableResizable from 'vue-draggable-resizable'
 export default {
   data: () => ({
+    createMode: true,
     idCounter: 0,
     selectedId: 0,
     zoom: 100,
@@ -72,20 +72,28 @@ export default {
   }),
   methods: {
 
-    test: function(e) {
-      var ComponentClass = Vue.extend(Cube)
-      var instance = new ComponentClass()
-      instance.$mount()
-      var t = this.idCounter.toString();
-      var tid = '#' + t;
-      this.idCounter++;
-      instance.$el.id = t;
-      this.$refs.zoom.appendChild(instance.$el)
-      $(tid).css({"background-color": "#ccc",
-          "left": e.clientX - 180,
-          "top": e.pageY - 30
+    Create: function(e) {
+      if (this.createMode) {
+        var ComponentClass = Vue.extend(Artboard)
+        var instance = new ComponentClass({
+          data :{
+            x: e.clientX - 203,
+            y: e.clientY - 31
           }
-        );
+        })
+        instance.$mount()
+        var t = this.idCounter.toString();
+        var tid = '#' + t;
+        this.idCounter++;
+        instance.$el.id = t;
+        this.$refs.zoom.appendChild(instance.$el)
+        $(tid).css({"background-color": "#ccc",
+            "left": e.clientX - 203,
+            "top": e.clientY - 31
+            }
+          );
+        this.createMode = false;
+      }
     }
   },
   props: {
@@ -93,7 +101,8 @@ export default {
   }
   ,components:{
     Tools,
-    Cube
+    Cube,
+    'vue-draggable-resizable': VueDraggableResizable,
   }
 }
 </script>
