@@ -12,11 +12,11 @@
       <v-text-field
       :style = "{marginLeft: '1.2em', marginTop: '-5em'}"
       class = 'caption'
-      v-model = "layer.x"
+      v-model = "xx"
     ></v-text-field>
     <v-text-field
       :style = "{marginLeft: '1.2em', marginTop: '-5em'}"
-      v-model="layer.y"
+      v-model="yy"
       class = 'caption'
     >
     </v-text-field>
@@ -32,12 +32,12 @@
     <v-list-tile>
       <v-text-field
         :style = "{marginLeft: '1.2em', marginTop: '-5.2em'}"
-      v-model="layer.xScale"
+      v-model="ww"
       class = 'caption'
     ></v-text-field>
     <v-text-field
       :style = "{marginLeft: '1.2em', marginTop: '-5.2em'}"
-      v-model="layer.yScale"
+      v-model="hh"
       class = 'caption'
     >
     </v-text-field>
@@ -51,11 +51,45 @@ export default {
   data () {
     return {
       layer: {
-        x : '10px',
+        x : '50px',
         y : '20px',
         xScale : '0.8px',
         yScale : '0.8px'
       }
+    }
+  },
+  computed: {
+    xx: {
+      get() {
+        return this.$store.getters.getX;
+      },
+      set(value) {
+        this.$store.commit('setX', {x :value});
+      },
+    },
+    yy: {
+      get() {
+        return this.$store.getters.getY;
+      },
+      set(value) {
+        this.$store.commit('setY', value);
+      },
+    },
+    hh: {
+      get() {
+        return this.$store.getters.getH;
+      },
+      set(value) {
+        this.$store.commit('setH', value);
+      },
+    },
+    ww: {
+      get() {
+        return this.$store.getters.getW;
+      },
+      set(value) {
+        this.$store.commit('setW', value);
+      },
     }
   }
 }

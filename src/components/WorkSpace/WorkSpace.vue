@@ -1,10 +1,9 @@
 <template>
-  <v-container>
+  <v-container @click="addBoard" fill-height>
     <v-layout row wrap>
       <div id = 'container'>
         <div id = 'zoom'>
-          <div id = 'underlay' @click= "Create($event)" ref = 'zoom'>
-          </div>
+          <component v-for="({name, props}, idx) in dynamicComponents" :is="name" v-bind="props" :key="idx"></component>
         </div>
       </div>
     </v-layout>
@@ -55,10 +54,10 @@
 import Vue from 'vue'
 import Tools from './Tools'
 import Cube from './objects/cube'
-import Artboard from './objects/Artboard'
-import VueDraggableResizable from 'vue-draggable-resizable'
+import ArtBoard from './objects/Artboard'
 export default {
   data: () => ({
+    dynamicComponents: [],
     createMode: true,
     idCounter: 0,
     selectedId: 0,
@@ -72,28 +71,30 @@ export default {
   }),
   methods: {
 
-    Create: function(e) {
-      if (this.createMode) {
-        var ComponentClass = Vue.extend(Artboard)
-        var instance = new ComponentClass({
-          data :{
-            x: e.clientX - 203,
-            y: e.clientY - 31
-          }
-        })
-        instance.$mount()
-        var t = this.idCounter.toString();
-        var tid = '#' + t;
-        this.idCounter++;
-        instance.$el.id = t;
-        this.$refs.zoom.appendChild(instance.$el)
-        $(tid).css({"background-color": "#ccc",
-            "left": e.clientX - 203,
-            "top": e.clientY - 31
-            }
-          );
+    addBoard({clientX, clientY}) {
+      if(!this.createMode) return;
+        this.dynamicComponents.push({name: 'art-board', props: {clientX, clientY}});
+      // if (this.createMode) {
+      //   var ComponentClass = Vue.extend(Artboard)
+      //   var instance = new ComponentClass({
+      //     data :{
+      //       x: e.clientX - 203,
+      //       y: e.clientY - 31
+      //     }
+      //   })
+      //   instance.$mount()
+      //   var t = this.idCounter.toString();
+      //   var tid = '#' + t;
+      //   this.idCounter++;
+      //   instance.$el.id = t;
+      //   this.$refs.zoom.appendChild(instance.$el)
+      //   $(tid).css({"background-color": "#ccc",
+      //       "left": e.clientX - 203,
+      //       "top": e.clientY - 31
+      //       }
+      //     );
         this.createMode = false;
-      }
+      // }
     }
   },
   props: {
@@ -102,7 +103,7 @@ export default {
   ,components:{
     Tools,
     Cube,
-    'vue-draggable-resizable': VueDraggableResizable,
+    ArtBoard,
   }
 }
 </script>
