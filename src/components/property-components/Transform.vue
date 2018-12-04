@@ -64,7 +64,7 @@ export default {
         return this.$store.getters.getX;
       },
       set(value) {
-        this.$store.commit('setX', {x :value});
+        this.$store.commit('setX', {key: "value", value});
       },
     },
     yy: {
@@ -80,7 +80,7 @@ export default {
         return this.$store.getters.getH;
       },
       set(value) {
-        this.$store.commit('setH', value);
+        this.$store.commit('setH', { h: value});
       },
     },
     ww: {

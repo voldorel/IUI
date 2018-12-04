@@ -1,11 +1,11 @@
 <template>
-	<vue-draggable-resizable :resizable="true" :w="300" :h= '500' :x="x" :y="y" :style="{border: '1px solid blue', zIndex: '1', backgroundColor: '#ccc'}" @dragging="onDrag" @resizing="onResize"> 
+	<vue-draggable-resizable :resizable="true" ref="box" :w="300" :h="500" :x="x" :y="y" :style="{border: '1px solid blue', zIndex: '1', backgroundColor: '#ccc'}" @dragging="onDrag" @resizing="onResize"> 
 	</vue-draggable-resizable>
 </template>
 
 <script>
 import VueDraggableResizable from 'vue-draggable-resizable'
-
+import { mapGetters } from 'vuex';
 export default {
 	props: {
 		clientX: {
@@ -20,6 +20,9 @@ export default {
     x: +this.clientX - 203,
     y: +this.clientY - 31,
   };
+},
+computed: {
+	...mapGetters(['getH']),
 },
   methods: {
     onResize(x, y, width, height) {
@@ -37,6 +40,11 @@ export default {
   	setX() {
   		this.$store.commit('update', {x: this.x, y: this.y, height: this.height, width: this.width});
   	}
+  	  },
+  	  watch: {
+  	  	getH: function(oldVal, newVal) {
+  	  		// this.$refs.box.height = newVal;
+  	  	}
   	  },
   components:{
     VueDraggableResizable

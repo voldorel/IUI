@@ -37,7 +37,7 @@ export const store = new Vuex.Store({
 			state.width = w;
 		},
 		setH: (state, { h }) => {
-			state.height = h;
+			state.height = Number(h);
 		},
 		test: state => {
 			conole.log('testestestestestestestesetest');
